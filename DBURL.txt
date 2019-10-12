@@ -1,2 +1,0 @@
-"postgres://rstcgduhrfxtry:bdd97adfc166086340f9a4d17d54c9c76971f6900b86acd1748c9d318e2d33aa@ec2-107-20-173-2.compute-1.amazonaws.com:5432/ded18qdsbs9ire"
-
