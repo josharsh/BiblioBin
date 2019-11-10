@@ -29,3 +29,16 @@ To try running your first Flask application:
 * Set the environment variable DATABASE_URL to be the URI of your database, which you should be able to see from the credentials page on Heroku.
 * Run flask run to start up your Flask application.
 * If you navigate to the URL provided by flask, you should see the text "Project 1: TODO"!
+
+# Goodreads API
+Goodreads is a popular book review website, and we’ll be using their API in this project to get access to their review data for individual books.
+
+* Go to https://www.goodreads.com/api and sign up for a Goodreads account if you don’t already have one.
+Navigate to https://www.goodreads.com/api/keys and apply for an API key. For “Application name” and “Company name” feel free to just write “project1,” and no need to include an application URL, callback URL, or support URL.
+* You should then see your API key. (For this project, we’ll care only about the “key”, not the “secret”.)
+* You can now use that API key to make requests to the Goodreads API, documented here. In particular, Python code like the below
+~~~python
+import requests
+res = requests.get("https://www.goodreads.com/book/review_counts.json", params={"key": "KEY", "isbns": "9781632168146"})
+print(res.json())
+~~
